@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block title %} Kevin Topel - Portfolio {% endblock title %}
+{% block content %}
+<div class="row d-block w-100">
+    <div class="col-12">
+        <h1 class="text-center">Kevin Topel - Developer </h1>
+    </div>
+</div>
+
+<div class="row text-center">
+    <div class="col-4 text-center text-muted">
+        262.352.6330
+    </div>
+    <div class="col-4 text-center text-muted">
+        kmtopel@gmail.com
+    </div>
+    <div class="col-4 text-center text-muted">
+        Milwaukee, WI
+    </div>
+</div>
+
+<div class="row text-center">
+    <div class="col">
+        <a class="btn btn-lg btn-outline-warning" href="https://resume.io/r/KwggQlFwH" target="#">View Resume</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <h5>Featured Projects:</h5>
+        <a class="btn btn-sm btn-warning" href="mke-covid.info" target="#"><h6>Milwaukee COVID-19 Resource Website</h6></a>
+        <p>This is a Flask application to designed to function as a community message board. In particular, it was created with the intention of providing a hub of information and resources related to COVID19 in the Milwaukee area.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+    <h5>GitHub Projects:</h5>
+    {% for project in data %}
+    <a class="btn btn-sm btn-warning" href={{ project['html_url'] }} target="#"><h6> {{ project['name'] }}</h6></a>
+        {% if project['description'] %}
+            <p> {{ project['description'] }}</p>
+        {% else %}
+            <p class="text-muted"> Project description forthcoming...</p>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+{% endblock content %}
