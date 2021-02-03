@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block title %} Kevin Topel / Projects {% endblock title %}
+{% block content %}
+<div class="container d-flex flex-column overflow-auto align-self-middle">
+<div class=row>
+    <a class="main-link" href="#featured-projects" data-toggle="collapse" role="button" aria-expanded="false" aria-controls"featured-projects"><h2>Featured</h2></a>
+</div>
+<div class="container collapse" id="featured-projects">
+    <div class="row">
+    <div class="col">
+        <a class="main-text text-white" href="http://mke-covid.info" target="#"><h5>Milwaukee COVID-19 Resource Website</h5></a>
+        <p class="main-text text-white" style="font-size: 80%;">This is a Flask application to designed to function as a community message board. In particular, it was created with the intention of providing a hub of information and resources related to COVID19 in the Milwaukee area.</p>
+    </div>
+</div>
+</div>
+<div class="row">
+    <a class="main-link" href="#github-projects" data-toggle="collapse" role="button" aria-expanded="false" aria-controls"github-projects"><h2>GitHub</h2></a>
+</div>
+<div class="container collapse" id="github-projects">
+    <div class="row">
+        <div class="col">
+        {% for project in data %}
+            <a class="main-text text-white" href={{ project['html_url'] }} target="#"><h5> {{ project['name'] }}</h5></a>
+            {% if project['description'] %}
+            <p class="main-text text-white" style="font-size: 80%;"> {{ project['description'] }}</p>
+            {% else %}
+            <p class="main-text text-muted" style="font-size: 80%;"> Project description forthcoming...</p>
+            {% endif %}
+        <hr>
+        {% endfor %}
+    </div>
+</div>
+</div>
+
+</div>
+
+{% endblock content %}

@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css" />
     <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
-    <div id="content" class="container">
-        {% block content %}
-        {% endblock content %}
-    </div>
 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4 d-flex flex-column justify-content-center align-middle">
+            <div class="container sticky-top position-absolute">
+                <div class="row">
+                    <div class="col">
+                      <h1 class="display-4">Kevin Topel</h1>
+                        <h4 class=""> Developer / Data Scientist</h4>
+                        <img src="/static/img/kev_n_bug.JPG" id="profile-pic" class="img-thumbnail img-fluid rounded" style="width: 100%;"></img>
+                        <div class=" container d-flex flex-row justify-content-center mt-2">
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="https://linkedin.com/in/kmtopel" target="#"><i class="text-white fa fa-linkedin fa-2x"></i></a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://github.com/kmtopel" target="#"><i class="text-white fa fa-github fa-2x border-light rounded"></i></a>
+                                </div>
+                                <div class="col-4">
+                                  <a href="https://kaggle.com/kmtopel" target="#" class="text-white"><img style="width: 28px; height: 28px; filter: invert(100%);" src="static/img/kaggle-brands.svg" alt="Ope!" class="fa-2x"></img></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <nav class="nav d-flex justify-content-center">
+                <ul class="navbar d-flex flex-row justify-content-between">
+                    <li class="nav-item"><a class="nav-link text-white" href="/"><h3>About</h4></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="/projects"><h3>Projects</h4></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#"><h3>Resume</h4></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#"><h3>Contact</h4></a></li>
+                </ul>
+            </nav>
+            <div id="main-container" class="container p-3 overflow-hidden border border-light rounded">
+            {% block content %}
+            {% endblock content %}
+            </div>
+        </div>
+    </div>
+</div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

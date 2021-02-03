@@ -1,48 +1,31 @@
 {% extends "layout.html" %}
-{% block title %} Kevin Topel - Portfolio {% endblock title %}
+{% block title %} Kevin Topel{% endblock title %}
 {% block content %}
-<div class="row d-block w-100">
-    <div class="col-12">
-        <h1 class="text-center">Kevin Topel - Developer </h1>
-    </div>
-</div>
 
-<div class="row text-center">
-    <div class="col-4 text-center text-muted">
-        262.352.6330
+    <div class="row">
+        <div class="col">
+            <h3>Welcome!</h3>
+            <span class="main-text">
+            <p>
+            I am a Developer from Milwaukee, WI currently working as a Research Assistant in both
+            the Affective Neuroscience and Anxiety Disorder Labs at the University of Wisconsin-Milwaukee.
+            I also work at a free primary care clinic for uninsured adults, which has motivated me to research and develop
+            ways to leverage data for the improvement of patient care and outcomes as well as helping clinicians better
+            understand their patient population.
+            </p>
+            <p>
+            My primary research interests lie in using the methods Machine Learning to understand the human mind and behavior as well as
+            exploring ways to make academic research and data accessible using interactive web applications.
+            </p>
+            <p>
+            Outside of my vocational and academic pursuits, I'm a multi-instrumentalist musician who loves performing,
+            writing original music, and multitrack recording. I also have a blog,
+            <a class="text-white" href="https://www.platopes.com"> Platopes</a>, where I like to develop my thinking on various topics
+            and further refine my writing chops.
+            </p>
+            <p>Feel free to contact me if you like what you see on my site. I'm currently open to freelance projects.</p>
+            </span>
+        </div>
     </div>
-    <div class="col-4 text-center text-muted">
-        kmtopel@gmail.com
-    </div>
-    <div class="col-4 text-center text-muted">
-        Milwaukee, WI
-    </div>
-</div>
 
-<div class="row text-center">
-    <div class="col">
-        <a class="btn btn-lg btn-outline-warning" href="https://resume.io/r/KwggQlFwH" target="#">View Resume</a>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col">
-        <h5>Featured Projects:</h5>
-        <a class="btn btn-sm btn-warning" href="mke-covid.info" target="#"><h6>Milwaukee COVID-19 Resource Website</h6></a>
-        <p>This is a Flask application to designed to function as a community message board. In particular, it was created with the intention of providing a hub of information and resources related to COVID19 in the Milwaukee area.</p>
-    </div>
-</div>
-<div class="row">
-    <div class="col">
-    <h5>GitHub Projects:</h5>
-    {% for project in data %}
-    <a class="btn btn-sm btn-warning" href={{ project['html_url'] }} target="#"><h6> {{ project['name'] }}</h6></a>
-        {% if project['description'] %}
-            <p> {{ project['description'] }}</p>
-        {% else %}
-            <p class="text-muted"> Project description forthcoming...</p>
-        {% endif %}
-    {% endfor %}
-    </div>
-</div>
 {% endblock content %}

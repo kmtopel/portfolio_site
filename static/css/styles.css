@@ -1,0 +1,39 @@
+#main-container {
+    height: 80vh;
+    overflow: scroll;
+}
+body {
+    font-family: 'Shrikhand', cursive;
+    color: white;
+    background-color: black;
+}
+.contact-list {
+    text-decoration: none;
+    list-style-type: none;
+}
+.main-link {
+    color: white;
+}
+footer {
+    bottom: 0;
+    position: fixed;
+    margin-top: 60px;
+    font-size: 80%;
+}
+.main-text {
+    font-family: Arial;
+}
+ul {
+    list-style-type: none;
+}
+li {
+    text-decoration: none;
+}
+/*#profile-pic {*/
+/*    -webkit-filter: grayscale(100%);*/
+/*    filter: grayscale(100%) hue-rotate(9);*/
+/*}*/
+/*p {*/
+/* font-family: 'Shrikhand';*/
+/* color: #BEBEBE;*/
+/*}*/
